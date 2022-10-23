@@ -12,8 +12,7 @@ document.getElementById('addInventoryButton').addEventListener('click', function
 
 document.getElementById('shipButton').addEventListener('click', function(e) {
     removeProduct(id);  
-    storeInventory(inventory);
-    
+    storeInventory(inventory); 
 });
 
 renderInventory();

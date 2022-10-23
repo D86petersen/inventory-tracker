@@ -1,13 +1,12 @@
 'use strict';
 
 // Create a function that grabs the values from user input and pushes them into the inventory array
-const addInventory = (inventory) => {
+const addInventory = (inventory, timestamp) => {
   let addProductName = document.getElementById('addProductName').value;
   let addProductQuantity = document.getElementById('addProductQuantity').value;
-  let dateEntered = document.getElementById('productDateEntered').value;
-
+  
 // Form validation
-    if (addProductName === '' || addProductQuantity === '' || dateEntered === '') {
+    if (addProductName === '' || addProductQuantity === '') {
         const error = document.getElementById('error');
         error.textContent = 'Please fill out all fields';
         return;
@@ -20,7 +19,7 @@ const addInventory = (inventory) => {
     id: uuidv4(),
     name: addProductName,
     quantity: addProductQuantity,
-    date: dateEntered,
+    date: moment(timestamp).format('MMMM Do YYYY, h:mm:ss a')
   });
 };
 
@@ -51,7 +50,6 @@ const removeProduct = (id) => {
 const clearForm = () => {
     document.getElementById('addProductName').value = '';
     document.getElementById('addProductQuantity').value = '';
-    document.getElementById('productDateEntered').value = '';
 };
 
 // Create a function that will render the inventory array to the screen
@@ -60,7 +58,7 @@ const renderInventory = () => {
     
     let inventoryList = document.getElementById('output');
     
-    inventoryList.innerHTML = '';
+    
     
     inventory.forEach((product) => {
         let productElement = document.createElement('div');
