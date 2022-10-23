@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Inventory Tracker</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fw-bold">
+      <div class="container">
+        <a class="navbar-brand" href="#">The Brownie Baker</a>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center my-3">Inventory Tracker</h1>
+        </div>
+        <hr />
+        <div class="row d-flex justify-content-around">
+          <div class="col-3 border border-dark bg-secondary p-4">
+            <h1 class="text-center">Enter Inventory</h1>
+            <h3 class="my-2">Product Name:</h3>
+            <input
+              type="text"
+              id="addProductName"
+              placeholder="Enter Product Name"
+            />
+            <h3 class="my-3">Quantity:</h3>
+            <input
+              type="text"
+              id="addProductQuantity"
+              placeholder="Enter Product Quantity"
+            />
+            <h3 class="my-3">Date Entered:</h3>
+            <input
+              type="text"
+              id="productDateEntered"
+              placeholder="Enter Date"
+            />
+            <br />
+            <button
+              type="button"
+              class="btn btn-dark mt-3"
+              id="addInventoryButton"
+            >
+              Add Product
+            </button>
+          </div>
+          <div class="col-3 border border-dark bg-secondary p-4">
+            <h1 class="text-center">Ship Product</h1>
+            <h3 class="my-2">Product Name:</h3>
+            <input
+              type="text"
+              id="removeProductName"
+              placeholder="Enter Product Name"
+            />
+            <h3 class="my-3">Quantity:</h3>
+            <input
+              type="text"
+              id="removeProductQuantity"
+              placeholder="Enter Product Quantity"
+            />
+            <h3 class="my-3">Date Shipped:</h3>
+            <input
+              type="text"
+              id="dateShipped"
+              placeholder="Enter Shipping Date"
+            />
+            <br />
+            <button type="button" class="btn btn-dark mt-3" id="shipButton">
+              Ship Product
+            </button>
+          </div>
+          <div class="col-3 border border-dark bg-secondary p-4">
+            <h1 class="text-center">Update Inventory</h1>
+            <h3 class="my-2">Product Name:</h3>
+            <input type="text" id="updateProductName" />
+            <h3 class="my-3">Quantity:</h3>
+            <input type="text" name="updateProductQuantity" />
+            <br />
+            <button type="button" class="btn btn-dark mt-3" id="updateButton">
+              Update Inventory
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="my-5">
+      <h1 class="text-center">Inventory List</h1>
+    </section>
+    <div id="error"></div>
+    <div id="output"></div>
+    <!-- Footer -->
+    <footer class="text-center text-white mt-5">
+      <!-- Copyright -->
+      <div class="text-center p-3 bg-secondary">
+        © 2020 Copyright:
+        <a class="text-white" href="#">The Brownie Baker</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+    <script src="uuidv4.js"></script>
+    <script src="functions.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
