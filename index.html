@@ -24,59 +24,78 @@
           <h1 class="text-center my-3">Inventory Tracker</h1>
         </div>
         <hr />
+        <div class="row">
+          <div id="error" class="alert alert-danger" role="alert"></div>
+          <div id="success" class="alert alert-success" role="alert"></div>
+        </div>
         <div class="row d-flex justify-content-around">
           <div class="col-3 border border-dark bg-secondary p-4">
-            <h1 class="text-center">Enter Inventory</h1>
-            <h3 class="my-2">Product Name:</h3>
-            <input
-              type="text"
-              id="addProductName"
-              placeholder="Enter Product Name"
-            />
-            <h3 class="my-3">Quantity:</h3>
-            <input
-              type="text"
-              id="addProductQuantity"
-              placeholder="Enter Product Quantity"
-            />
-            <br />
-            <button
-              type="button"
-              class="btn btn-dark mt-3"
-              id="addInventoryButton"
-            >
-              Add Product
-            </button>
+            <form id="enterInventory">
+              <h1 class="text-center">Enter Inventory</h1>
+
+              <h3 class="my-2">Product Name:</h3>
+              <input type="text" name="name" placeholder="Enter Product Name" />
+
+              <h3 class="my-3">Quantity:</h3>
+              <input
+                type="text"
+                name="quantity"
+                placeholder="Enter Product Quantity"
+              />
+              <br />
+
+              <label for="containsNuts">Contains Nuts?</label>
+              <input type="checkbox" name="containsNuts" />
+              <br />
+
+              <button
+                type="submit"
+                class="btn btn-dark mt-3"
+                id="addInventoryButton"
+              >
+                Add Product
+              </button>
+            </form>
           </div>
           <div class="col-3 border border-dark bg-secondary p-4">
-            <h1 class="text-center">Ship Product</h1>
-            <h3 class="my-2">Product Name:</h3>
-            <input
-              type="text"
-              id="removeProductName"
-              placeholder="Enter Product Name"
-            />
-            <h3 class="my-3">Quantity:</h3>
-            <input
-              type="text"
-              id="removeProductQuantity"
-              placeholder="Enter Product Quantity"
-            />
-            <br />
-            <button type="button" class="btn btn-dark mt-3" id="shipButton">
-              Ship Product
-            </button>
+            <form id="shipProduct">
+              <h1 class="text-center">Ship Product</h1>
+
+              <h3 class="my-2">Product Name:</h3>
+              <input type="text" name="name" placeholder="Enter Product Name" />
+
+              <h3 class="my-3">Quantity:</h3>
+              <input
+                type="text"
+                name="quantity"
+                placeholder="Enter Product Quantity"
+              />
+              <br />
+
+              <button type="submit" class="btn btn-dark mt-3" id="shipButton">
+                Ship Product
+              </button>
+            </form>
           </div>
           <div class="col-3 border border-dark bg-secondary p-4">
-            <h1 class="text-center">Update Inventory</h1>
-            <h3 class="my-2">Product Name:</h3>
-            <input type="text" id="updateProductName" />
-            <h3 class="my-3">Quantity:</h3>
-            <input type="text" name="updateProductQuantity" />
-            <br />
-            <button type="button" class="btn btn-dark mt-3" id="updateButton">
-              Update Inventory
-            </button>
+            <form id="updateInventory">
+              <h1 class="text-center">Update Inventory</h1>
+
+              <h3 class="my-2">Product Name:</h3>
+              <input type="text" name="name" placeholder="Enter Product Name" />
+
+              <h3 class="my-3">Quantity:</h3>
+              <input
+                type="text"
+                name="quantity"
+                placeholder="Enter Product Quantity"
+              />
+             <br />
+
+              <button type="submit" class="btn btn-dark mt-3" id="updateButton">
+                Update Inventory
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -84,13 +103,14 @@
     <section class="my-5">
       <h1 class="text-center">Inventory List</h1>
     </section>
-    <div id="error"></div>
+
     <div id="output"></div>
+  
     <!-- Footer -->
     <footer class="text-center text-white mt-5">
       <!-- Copyright -->
       <div class="text-center p-3 bg-secondary">
-        © 2020 Copyright:
+        © 2022 Copyright:
         <a class="text-white" href="#">The Brownie Baker</a>
       </div>
       <!-- Copyright -->
@@ -102,10 +122,9 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
     <script src="uuidv4.js"></script>
-    <script src="functions.js"></script>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

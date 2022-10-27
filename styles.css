@@ -1,21 +1,19 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#output{
-    width: 100%;  
-    background-color: #000;
-    color: #fff;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5rem;
-    overflow: auto;
+#output {
+  width: 100%;
+  background-color: lightgrey;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  overflow: auto;
 }
-#error{
-    width: 100%;
-    background-color: #000;
-    color: red;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5rem;
-    overflow: auto;
+#error,
+#success {
+  display: none;
+  margin: 20px;
 }
